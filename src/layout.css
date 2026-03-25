@@ -1,0 +1,72 @@
+/* --- APP WRAPPER --- */
+.app-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+/* --- SIDEBAR STYLES --- */
+.sidebar {
+    width: 260px;
+    background: #1e293b; /* Dark Slate */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar-logo {
+    padding: 0 24px 32px 24px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #6366f1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+}
+
+.nav-item {
+    padding: 12px 24px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s;
+}
+
+.nav-item:hover {
+    background: #334155;
+    color: white;
+}
+
+.nav-item.active {
+    background: #312e81;
+    color: white;
+    border-right: 4px solid #6366f1;
+}
+
+/* --- MAIN CONTENT AREA --- */
+.main-content {
+    margin-left: 260px; /* Same as sidebar width */
+    flex-grow: 1;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+    .sidebar { width: 70px; }
+    .sidebar-logo span, .nav-item span { display: none; }
+    .main-content { margin-left: 70px; }
+}
